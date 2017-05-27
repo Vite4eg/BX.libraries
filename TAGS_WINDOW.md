@@ -62,6 +62,7 @@ BX.bind(BX('my-button'), 'click', function () {
 
 
 <a name="methods"><h2>Методы</h2></a>
+
 * <code>[showPopup()](#showPopup)</code> — показ объекта
 * <code>setBindElement(bindElement)</code> — спозиционировать окно относительно html-элемента **bindElement**. Аналогично можно задать позиционирование через передачу второго параметра в метод [create](#create)
 
