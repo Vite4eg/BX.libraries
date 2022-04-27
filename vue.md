@@ -44,14 +44,14 @@ Bitrix\Main\UI\Extension::load(['ui.vue']);
 
 ### Вынос описания в script.js
 
-Вынесем Vue в script.js компонента. Так как script.js выполняется раньше, чем js, который описан в template.php, то на момент исполнения script.js DOM ещё не создал элемент для параметра `el`. И тогда либо в script.js вводить какой-нибудь BX.ready, либо в script.js описать Vue без параметра `el`, а примонтировать уже в шаблоне:
+Вынесем Vue в **script.js** компонента. Так как **script.js** выполняется раньше, чем js, который описан в **template.php**, то на момент исполнения **script.js** DOM ещё не создал элемент для параметра `el`. И тогда либо в **script.js** вводить какой-нибудь `BX.ready`, либо в **script.js** описать Vue без параметра `el`, а примонтировать уже в шаблоне:
 
 ```javascript
 // script.js шаблона
 // я не указываю параметр el - Vue создаст экземпляр, но никуда его не вмонтирует. Вмонтируем его в template.php
 BX.namespace('BX.myVueComponent');
 
-BX.myVueComponent = BX.Vue.component({
+BX.myVueComponent = BX.Vue.create({
     template: `<div>Hello</div>`,
     data () {
         return {};
@@ -125,11 +125,11 @@ $arResult = [
 </script>
 ```
 
-При использовании Vue.extend Vue сам производит слияние data, которые описаны в script.js и в template.php.
+При использовании `Vue.extend` Vue сам производит слияние `data`, которые описаны в **script.js** и в **template.php**.
 
 Такой способ мне нравится больше всего так как:
 
 * Не нужен лишний запрос на получение первоначальных данных
-* Не нужны никакие BX.ready
+* Не нужны никакие `BX.ready`
 * Всё описание Vue вынесено в отдельный файл
-* В template.php происходит только инициализация с передачей параметров
+* В **template.php** происходит только инициализация с передачей параметров
