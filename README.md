@@ -4,3 +4,4 @@
 * [BX.PopupWindow](popup_window.md) — всплывающее окно
 * [BX.calendar](calendar.md) — календарь
 * [BX.TagsWindow](TAGS_WINDOW.md) — всплывающее окно выбора тегов
+* [BX.Vue](vue.md) — работа во Vue.js без сборки
