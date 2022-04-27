@@ -30,7 +30,7 @@ Bitrix\Main\UI\Extension::load(['ui.vue']);
 ?>
 <div id="my-component-vue"></div>
 <script>
-	BX.Vue.create({
+    BX.Vue.create({
         el: 'my-component-vue',
         template: `
             <div>Hello</div>
@@ -86,18 +86,18 @@ Bitrix\Main\UI\Extension::load(['ui.vue']);
 BX.namespace('BX.myVueComponent');
 
 BX.myVueComponent = BX.Vue.extend({
-	template: `<div>
-		{{ message }}
-		<ul>
-			<li v-for="item in items" :key="'item_' + item.ID">{{ item.NAME }}</li>
-		</ul>
-	</div>`,
-	data () {
-		return {
-			items: [],	// пока пусто, дальше сюда будут переданы конкретные значения
+    template: `<div>
+        {{ message }}
+        <ul>
+            <li v-for="item in items" :key="'item_' + item.ID">{{ item.NAME }}</li>
+        </ul>
+    </div>`,
+    data () {
+        return {
+            items: [],  // пока пусто, дальше сюда будут переданы конкретные значения
             message: '',
-		}
-	}
+        }
+    }
 });
 ```
 
