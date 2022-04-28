@@ -6,6 +6,7 @@
 
 [Документация](https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=176&INDEX=Y) по теме
 
+[Пример готового компонента](examples/my.vue.component/)
 
 
 ## Использование в шаблоне компонента
@@ -75,7 +76,7 @@ Bitrix\Main\UI\Extension::load(['ui.vue']);
 
 Если надо при создании Vue необходимы первоначальные данные, есть несколько вариантов:
 
-* отправка ajax запроса на хук [created][https://ru.vuejs.org/v2/api/#created] экземпляра Vue. Такой вариант вызывает лишнее обращение к серверу
+* отправка ajax запроса на хук [created](https://ru.vuejs.org/v2/api/#created) экземпляра Vue. Такой вариант вызывает лишнее обращение к серверу
 * использование [Vue.extend](https://ru.vuejs.org/v2/api/#Vue-extend)
 
 #### Использование Vue.extend
@@ -133,3 +134,4 @@ $arResult = [
 * Не нужны никакие `BX.ready`
 * Всё описание Vue вынесено в отдельный файл
 * В **template.php** происходит только инициализация с передачей параметров
+
